@@ -1,15 +1,12 @@
 public class Student {
-    // Instance Variables
     private int id;
     private String name;
     private int age;
     private String department;
     private double marks;
     private char grade;
-    // Default Constructor
     public Student() {
     }
-    // Parameterized Constructor
     public Student(int id, String name, int age,
                    String department, double marks) {
         this.id = id;
@@ -19,25 +16,19 @@ public class Student {
         this.marks = marks;
         calculateGrade();
     }
-    // Calculate Grade
     private void calculateGrade() {
 
         if (marks >= 90)
             grade = 'A';
-
         else if (marks >= 80)
             grade = 'B';
-
         else if (marks >= 70)
             grade = 'C';
-
         else if (marks >= 60)
             grade = 'D';
-
         else
             grade = 'F';
     }
-    // Getters
     public int getId() {
         return id;
     }
@@ -56,7 +47,6 @@ public class Student {
     public char getGrade() {
         return grade;
     }
-    // Setters
     public void setName(String name) {
         this.name = name;
     }
@@ -70,7 +60,6 @@ public class Student {
         this.marks = marks;
         calculateGrade();
     }
-    // Display Student Details
     public void displayStudent() {
         System.out.println("--------------------------------");
         System.out.println("ID         : " + id);
