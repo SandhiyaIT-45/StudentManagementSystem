@@ -4,13 +4,10 @@ public class StudentService {
 
     private ArrayList<Student> students = new ArrayList<>();
 
-    // Add Student
     public void addStudent(Student student) {
         students.add(student);
         System.out.println("Student added successfully.");
     }
-
-    // View All Students
     public void viewStudents() {
 
         if (students.isEmpty()) {
@@ -25,7 +22,6 @@ public class StudentService {
         }
     }
 
-    // Search Student by ID
     public Student searchStudent(int id) {
 
         for (Student student : students) {
@@ -37,7 +33,6 @@ public class StudentService {
         return null;
     }
 
-    // Update Student
     public void updateStudent(int id, String name,
                               int age,
                               String department,
@@ -61,7 +56,6 @@ public class StudentService {
         }
     }
 
-    // Delete Student
     public void deleteStudent(int id) {
 
         Student student = searchStudent(id);
