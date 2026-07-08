@@ -1,10 +1,14 @@
 import java.util.ArrayList;
-
 public class StudentService {
 
     private ArrayList<Student> students = new ArrayList<>();
 
     public void addStudent(Student student) {
+        System.out.println(searchStudent(student.getId()));
+        if(searchStudent(student.getId())!=null){
+                System.out.println("Student ID already exists!");
+                return;
+        }
         students.add(student);
         System.out.println("Student added successfully.");
     }
