@@ -27,6 +27,10 @@ public class Main {
                     System.out.print("Enter ID: ");
                     int id = sc.nextInt();
                     sc.nextLine();
+                    if (service.searchStudent(id)!=null){
+                        System.out.println("Student ID already exists!");
+                        break;
+                    }
 
                     System.out.print("Enter Name: ");
                     String name = sc.nextLine();
